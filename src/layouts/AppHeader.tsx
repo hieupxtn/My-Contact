@@ -8,7 +8,7 @@ const AppHeader: React.FC= () => {
   const location = useLocation();
 
   return (
-      <Header>
+      <Header className="fixed top-0 left-0 right-0 z-10">
         <Menu theme="dark" mode="horizontal" className='justify-center' selectedKeys={[location.pathname]}>
           <Menu.Item key="home">
             <Link to="/">Home</Link>
