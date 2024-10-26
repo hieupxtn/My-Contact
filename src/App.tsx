@@ -1,28 +1,18 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import Home from './compoment/Home';
-import About from './compoment/About';
-import { Layout, Menu } from 'antd';
-import Contact from './compoment/Contact';
+import { Routes, Route } from 'react-router-dom';
+import Home from './compoments/Home';
+import About from './compoments/About';
+import { Layout } from 'antd';
+import Contact from './compoments/Contact';
+import AppFooter from './layouts/AppFooter';
+import AppHeader from './layouts/AppHeader';
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 const App: React.FC = () => {
   return (
-    <Layout>
-      <Header>
-        <Menu theme="dark" mode="horizontal" className='justify-center'>
-          <Menu.Item key="home">
-            <Link to="/">Home</Link>
-          </Menu.Item>
-          <Menu.Item key="about">
-            <Link to="/about">About</Link>
-          </Menu.Item>
-          <Menu.Item key="contact">
-            <Link to="/contact">Contact</Link>
-          </Menu.Item>
-        </Menu>
-      </Header>
+    <Layout className="w-screen h-screen">
+      <AppHeader />
       <Content style={{ padding: '20px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Content>
+      <AppFooter />
     </Layout>
   );
 };
