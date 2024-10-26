@@ -5,7 +5,7 @@ const { Header, Content, Footer } = Layout;
 
 const App: React.FC = () => {
   return (
-    <Layout>
+    <Layout className='h-screen'>
       <Header>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         </Menu>
       </Header>
       <Content style={{ padding: '50px' }}>
-        <h1>Welcome to Ant Design with React!</h1>
+        <h1 className="text-center">Welcome to Ant Design with React!</h1>
         <Button type="primary">Click Me</Button>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Ant Design ©2024 Created by You</Footer>
