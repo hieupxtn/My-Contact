@@ -11,7 +11,7 @@ const App: React.FC = () => {
   return (
     <Layout>
       <Header>
-        <Menu theme="dark" mode="horizontal">
+        <Menu theme="dark" mode="horizontal" className='justify-center'>
           <Menu.Item key="home">
             <Link to="/">Home</Link>
           </Menu.Item>
